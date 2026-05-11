@@ -1,2 +1,10 @@
 # javascript
-A repository dedicated solely for this wonderful language of the web that powers the functional side of practically everything we do since its release.
+
+A lightweight JavaScript starter library with basic UI tools:
+- `dateEdit`
+- `pivotTable`
+- `dataGrid`
+- `comboBox`
+- `sidebar`
+
+Open `/home/runner/work/javascript/javascript/index.html` in a browser to see all components in action.

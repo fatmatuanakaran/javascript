@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Tool Library</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>JavaScript Tool Library</h1>
+    <p>A small, lightweight starter library for common UI tools.</p>
+
+    <section>
+      <h2>Date Edit</h2>
+      <div id="date-edit"></div>
+    </section>
+
+    <section>
+      <h2>Combo Box</h2>
+      <div id="combo-box"></div>
+    </section>
+
+    <section>
+      <h2>Data Grid</h2>
+      <div id="data-grid"></div>
+    </section>
+
+    <section>
+      <h2>Pivot Table</h2>
+      <div id="pivot-table"></div>
+    </section>
+
+    <section>
+      <h2>Sidebar</h2>
+      <div id="sidebar"></div>
+    </section>
+
+    <script src="tools.js"></script>
+    <script>
+      const dateInput = ToolLibrary.dateEdit('#date-edit', { value: '2026-05-11' });
+      dateInput.addEventListener('change', () => {
+        console.log('Selected date:', dateInput.value);
+      });
+
+      ToolLibrary.comboBox('#combo-box', {
+        options: ['JavaScript', 'TypeScript', 'Node.js'],
+        selected: 'JavaScript',
+        onChange: (value) => console.log('Selected option:', value),
+      });
+
+      const rows = [
+        { category: 'Books', item: 'JavaScript Guide', amount: 20 },
+        { category: 'Books', item: 'Node.js Handbook', amount: 25 },
+        { category: 'Tools', item: 'Keyboard', amount: 45 },
+      ];
+
+      ToolLibrary.dataGrid('#data-grid', {
+        data: rows,
+        columns: ['category', 'item', 'amount'],
+      });
+
+      ToolLibrary.pivotTable('#pivot-table', {
+        data: rows,
+        rowField: 'category',
+        valueField: 'amount',
+      });
+
+      ToolLibrary.sidebar('#sidebar', {
+        title: 'Components',
+        items: [
+          { label: 'dateEdit', href: '#date-edit' },
+          { label: 'pivotTable', href: '#pivot-table' },
+          { label: 'dataGrid', href: '#data-grid' },
+          { label: 'comboBox', href: '#combo-box' },
+          { label: 'sidebar', href: '#sidebar' },
+        ],
+      });
+    </script>
+  </body>
+</html>
