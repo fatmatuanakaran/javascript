@@ -7,4 +7,4 @@ A lightweight JavaScript starter library with basic UI tools:
 - `comboBox`
 - `sidebar`
 
-Open `/home/runner/work/javascript/javascript/index.html` in a browser to see all components in action.
+Open `index.html` in a browser to see all components in action.
