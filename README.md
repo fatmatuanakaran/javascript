@@ -1,10 +1,13 @@
-# javascript
+# JavaScript Tool Library
 
-A lightweight JavaScript starter library with basic UI tools:
+A simple starter project for a JavaScript UI tool library.
+
+## Planned Components
 - `dateEdit`
 - `pivotTable`
 - `dataGrid`
 - `comboBox`
 - `sidebar`
 
-Open `index.html` in a browser to see all components in action.
+## Goal
+Keep the library lightweight and easy to understand while learning JavaScript.
